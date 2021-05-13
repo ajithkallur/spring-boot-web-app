@@ -18,9 +18,14 @@ public class LoginController {
 	
 	// RequestMapping Annotation to map URL TO METHOD
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String showLoginPage(ModelMap model) {
-		//return new ModelAndView("login", model);
-		return "login";	
+	public ModelAndView showLoginPage(ModelMap model) {	
+	   // modelAndView.setViewName("login");
+	    return new ModelAndView("login");
+	}
+	@RequestMapping(value = "/ajith", method = RequestMethod.GET)
+	public ModelAndView showAjithProfile(ModelMap model) {	
+	   // modelAndView.setViewName("login");
+	    return new ModelAndView("index");
 	}
 	@RequestMapping(value = "/login" , method = RequestMethod.POST)
 	public String showWelcomePage(ModelMap model, @RequestParam String name) {
