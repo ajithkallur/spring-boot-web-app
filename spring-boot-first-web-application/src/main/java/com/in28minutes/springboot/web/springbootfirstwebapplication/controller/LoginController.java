@@ -45,7 +45,7 @@ public class LoginController {
 			welcomemv.setViewName("welcome");
         } else {
         	welcomemv.addObject("errorMessage", "Invalid Credentials!!");
-        	welcomemv.setViewName("welcome");
+        	welcomemv.setViewName("login");
         }
 		
 		return welcomemv;		
