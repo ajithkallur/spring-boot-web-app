@@ -21,8 +21,7 @@ public class LoginController {
 	
 	@Autowired
 	private LoginService service;
-	
-	
+
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView showLoginPage(ModelMap model) {	
